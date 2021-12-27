@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/semi_dark_blue"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_rounded"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_series_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                tools:text="Lanka Premier League, 2021" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_time_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_12ssp"
+                tools:text="5th T20 - 07 Dec 2021 . 07:30 PM, Tue" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_live_upcoming_match_type"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginTop="-10dp"
+            android:background="@drawable/bg_match_type"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/linearLayout3"
+            app:layout_constraintStart_toStartOf="@id/linearLayout3"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout3"
+            tools:text="T20" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout3">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_live_upcoming_team1Flag"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@android:color/darker_gray"
+                app:civ_border_width="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/vs"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/iv_live_upcoming_team2Flag"
+                app:layout_constraintEnd_toStartOf="@id/iv_live_upcoming_team2Flag"
+                app:layout_constraintStart_toEndOf="@id/iv_live_upcoming_team1Flag"
+                app:layout_constraintTop_toTopOf="@id/iv_live_upcoming_team1Flag" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/timer_time"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/materialTextView"
+                app:layout_constraintStart_toStartOf="@+id/materialTextView"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_team1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/iv_live_upcoming_team1Flag"
+                app:layout_constraintStart_toStartOf="@id/iv_live_upcoming_team1Flag"
+                app:layout_constraintTop_toBottomOf="@id/iv_live_upcoming_team1Flag"
+                tools:text="Galle Gladiators" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_market_team1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/market"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintEnd_toEndOf="@id/tv_live_upcoming_overs_team1_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_team1Name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_overs_team1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/_20_overs"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_market_team1_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_market_team1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tv_live_upcoming_market_team1_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_team1Name"
+                tools:text="75-77" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_overs_team1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_live_upcoming_market_team1"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_market_team1"
+                tools:text="000-000" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_live_upcoming_team2Flag"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@android:color/darker_gray"
+                app:civ_border_width="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_team2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/iv_live_upcoming_team2Flag"
+                app:layout_constraintStart_toStartOf="@id/iv_live_upcoming_team2Flag"
+                app:layout_constraintTop_toBottomOf="@id/iv_live_upcoming_team2Flag"
+                tools:text="Galle Gladiators" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_market_team2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/market"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintEnd_toEndOf="@id/tv_live_upcoming_overs_team2_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_team2Name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_overs_team2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/_20_overs"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintStart_toStartOf="@id/tv_live_upcoming_team2Name"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_market_team2_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_market_team2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_live_upcoming_market_team2_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_team2Name"
+                tools:text="75-77" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_overs_team2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_live_upcoming_market_team2"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_market_team2"
+                tools:text="000-000" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_share_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/share_this_app_give_us_5_star"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcoming_overs_team1_title" />
+
+            <com.app.adprogressbarlib.AdCircleProgress
+                android:id="@+id/progress_live_upcoming_indicator_team1"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                app:adpgb_background_color="@color/transparent_black"
+                app:adpgb_finished_color="@color/green"
+                app:adpgb_max="100"
+                app:adpgb_show_text="true"
+                app:adpgb_text_color="@color/green"
+                app:adpgb_text_size="@dimen/_10ssp"
+                app:adpgb_unfinished_color="@android:color/darker_gray"
+                app:adpgb_unfinished_stroke_width="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_live_upcoming_share_app"
+                custom:adpgb_finished_stroke_width="@dimen/_3sdp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_team1_shortName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/view_live_upcoming"
+                app:layout_constraintStart_toEndOf="@id/progress_live_upcoming_indicator_team1"
+                tools:text="JK" />
+
+            <View
+                android:id="@+id/view_live_upcoming"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@color/dark_blue"
+                app:layout_constraintBottom_toBottomOf="@id/progress_live_upcoming_indicator_team2"
+                app:layout_constraintEnd_toStartOf="@id/progress_live_upcoming_indicator_team2"
+                app:layout_constraintStart_toEndOf="@id/progress_live_upcoming_indicator_team1"
+                app:layout_constraintTop_toTopOf="@id/progress_live_upcoming_indicator_team1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcomimg_result_percentage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/bg_clear_rounded_tab_look_clear"
+                android:backgroundTint="@color/dark_blue"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@id/progress_live_upcoming_indicator_team2"
+                app:layout_constraintEnd_toEndOf="@id/view_live_upcoming"
+                app:layout_constraintStart_toStartOf="@id/view_live_upcoming"
+                app:layout_constraintTop_toTopOf="@id/progress_live_upcoming_indicator_team1"
+                tools:text="0%" />
+
+            <com.app.adprogressbarlib.AdCircleProgress
+                android:id="@+id/progress_live_upcoming_indicator_team2"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_3sdp"
+                app:adpgb_background_color="@color/transparent_black"
+                app:adpgb_finished_color="@color/red"
+                app:adpgb_max="100"
+                app:adpgb_show_text="true"
+                app:adpgb_text_color="@color/red"
+                app:adpgb_text_size="@dimen/_10ssp"
+                app:adpgb_unfinished_color="@android:color/darker_gray"
+                app:adpgb_unfinished_stroke_width="@dimen/_3sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_live_upcoming_share_app"
+                custom:adpgb_finished_stroke_width="@dimen/_3sdp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_team2_shortName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/view_live_upcoming"
+                app:layout_constraintEnd_toStartOf="@id/progress_live_upcoming_indicator_team2"
+                tools:text="JK" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_live_upcoming_percentage_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/tie"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/view_live_upcoming"
+                app:layout_constraintStart_toStartOf="@id/view_live_upcoming"
+                app:layout_constraintTop_toBottomOf="@id/tv_live_upcomimg_result_percentage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

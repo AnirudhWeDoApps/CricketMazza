@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/semi_dark_blue">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/co_recent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/_8sdp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_matchNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="28th Match, T10 -" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_series"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:autoSizeStepGranularity="@dimen/_2ssp"
+                app:autoSizeMaxTextSize="@dimen/_10ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                app:fontFamily="@font/montserrat"
+                app:layout_constraintEnd_toStartOf="@id/tv_recent_potm"
+                app:layout_constraintStart_toEndOf="@id/tv_recent_matchNo"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="T10 League 2021-22"
+                tools:targetApi="o" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:autoSizeStepGranularity="@dimen/_2ssp"
+                app:autoSizeMaxTextSize="@dimen/_9ssp"
+                android:autoSizeMinTextSize="@dimen/_8ssp"
+                android:gravity="start"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@+id/tv_recent_potm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_matchNo"
+                tools:text="United Arab Emirates"
+                tools:targetApi="o" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_recent_team1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_location"
+                tools:src="@mipmap/ic_launcher" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_team1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:autoSizeStepGranularity="@dimen/_2ssp"
+                app:autoSizeMaxTextSize="@dimen/_10ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_recent_team1"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_location"
+                tools:text="TCB"
+                tools:targetApi="o" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_recent_team2"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_team1Name"
+                tools:src="@mipmap/ic_launcher" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_team2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:autoSizeStepGranularity="@dimen/_2ssp"
+                app:autoSizeMaxTextSize="@dimen/_10ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                app:layout_constraintStart_toEndOf="@id/iv_recent_team2"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_team1Name"
+                tools:text="DB"
+                tools:targetApi="o" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_team1Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:autoSizeStepGranularity="@dimen/_2ssp"
+                app:autoSizeMaxTextSize="@dimen/_10ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tv_recent_team1Name"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_location"
+                tools:text="80-4 (10.0)"
+                tools:targetApi="o" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_team2Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:autoSizeStepGranularity="@dimen/_2ssp"
+                app:autoSizeMaxTextSize="@dimen/_10ssp"
+                android:autoSizeMinTextSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_recent_team1Score"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_team1Score"
+                tools:text="80-4 (10.0)"
+                tools:targetApi="o" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_potm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/potm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_recent_potm"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_recent_potm"
+                app:layout_constraintStart_toStartOf="@+id/tv_recent_potm"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_potm"
+                tools:src="@mipmap/ic_launcher" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_potm_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="@id/iv_recent_potm"
+                app:layout_constraintStart_toStartOf="@id/iv_recent_potm"
+                app:layout_constraintTop_toBottomOf="@id/iv_recent_potm"
+                tools:text="SmitCoderX" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_match_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_team2Name"
+                tools:text="DB won by 10 wickets" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_black"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/co_recent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_points_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/points_table"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:textAllCaps="true" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_scorecard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textSize="@dimen/_10ssp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/score_card"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:textAllCaps="true" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

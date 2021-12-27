@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@drawable/bg_matchwise_title"
+    android:backgroundTint="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_livematch_series_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Lanka Premier League, 2021" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_livematch_team1Flag"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_livematch_series_name"
+            tools:src="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/iv_livematch_team1Flag"
+            app:layout_constraintStart_toEndOf="@id/iv_livematch_team1Flag"
+            app:layout_constraintTop_toTopOf="@id/iv_livematch_team1Flag">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_livematch_team1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                tools:text="Ind" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_livematch_team1Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                tools:text="4-0" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_livematch_team1Over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12ssp"
+                tools:text="9.5 Overs" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="2dp"
+            android:layout_height="@dimen/_55sdp"
+            android:background="@color/transparent_black"
+            android:backgroundTint="@color/transparent_black"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@drawable/bg_circle_vs"
+            android:fontFamily="@font/montserrat"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/vs"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_livematch_team2Flag"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_livematch_series_name"
+            tools:src="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/iv_livematch_team2Flag"
+            app:layout_constraintEnd_toStartOf="@id/iv_livematch_team2Flag"
+            app:layout_constraintTop_toTopOf="@id/iv_livematch_team2Flag">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_livematch_team2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/montserrat"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                tools:text="Ind" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_livematch_team2Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                tools:text="4-0" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_livematch_team2Over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12ssp"
+                tools:text="9.5 Overs" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_livematch_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_rounded_tab_look"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_livematch_team1Fav"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/green"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:text="21" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_livematch_team2Fav"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@drawable/bg_circle"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:text="21" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_livematch_crr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_livematch_fav"
+            tools:text="CRR: 9.0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_livematch_favTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_livematch_fav"
+            tools:text="Adelaide Strikers" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_livematch_rrr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_livematch_fav"
+            tools:text="RRR: 9.0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_livematch_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_livematch_crr"
+            tools:text="ADS need 109 run in 90 balls" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_livematch_live"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_rounded_tab_look"
+            android:fontFamily="@font/montserrat"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/live"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_livematch_rrr" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

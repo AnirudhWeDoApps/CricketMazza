@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recent_matchwise_root"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@android:color/transparent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matchwise_co"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_recent_matchwise"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/co_innner_matchwise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_mathcwise_team1Flag"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@mipmap/ic_launcher_round" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/iv_mathcwise_team1Flag"
+                app:layout_constraintStart_toEndOf="@id/iv_mathcwise_team1Flag"
+                app:layout_constraintTop_toTopOf="@id/iv_mathcwise_team1Flag">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_matchwise_team1Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="Ind" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_matchwise_team1Score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="4-0" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_circle_vs"
+                android:fontFamily="@font/montserrat"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/vs"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_mathcwise_team2Flag"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@mipmap/ic_launcher_round" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/iv_mathcwise_team2Flag"
+                app:layout_constraintEnd_toStartOf="@id/iv_mathcwise_team2Flag"
+                app:layout_constraintTop_toTopOf="@id/iv_mathcwise_team2Flag">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_matchwise_team2Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="Ind" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_matchwise_team2Score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    tools:text="4-0" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inner_matchwise_matchNotLive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_matchwise_seriesName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="West Indies tour to India, 2021" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recent_matchwise_start_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_recent_matchwise_seriesName"
+                tools:text="13 Dec 2021 To 22 Dec Dec 2021" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/matchwise_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:background="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inner_matchwise_matchNotLive" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matchwise_view">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_matchwise_title_totalMatches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/total_matches"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_matchwise_totalMatches"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:textAllCaps="true"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                tools:text="(05)" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_matchwise_title_totalleft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/total_left"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_matchwise_totalLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat"
+                android:textAllCaps="true"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                tools:text="(05)" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_recent_matchWise_seriesType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_matchwise_title"
+        android:fontFamily="@font/montserrat"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/series_match"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_anchor="@id/matchwise_co"
+        app:layout_anchorGravity="top|center" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".Ui.MatchDetails.InfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/match"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_match"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent_black"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/match_type"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_matchType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent_black"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/series"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_series"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/venue"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_venue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent_black"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/toss"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_toss"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/status"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent_black"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/umpire"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_umpire"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/_3rd_empire"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_thirdEmpire"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent_black"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="@string/referee"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/montserrat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_referee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:fontFamily="@font/montserrat"
+                    tools:text="@string/match" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_info"
+            style="@style/SpinKitView.FadingCircle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:visibility="visible"
+            app:SpinKit_Color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

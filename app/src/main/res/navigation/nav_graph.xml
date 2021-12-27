@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.wedoapps.cricketmazza.Ui.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_update"
+            app:destination="@id/update" />
+        <action
+            android:id="@+id/action_home_to_singleUpdatesFragment"
+            app:destination="@id/singleUpdatesFragment" />
+        <action
+            android:id="@+id/action_home_to_recentMatchDetailFragment"
+            app:destination="@id/recentMatchDetailFragment" />
+        <action
+            android:id="@+id/action_home_to_pointsTableFragment"
+            app:destination="@id/pointsTableFragment" />
+        <action
+            android:id="@+id/action_home_to_scoreCardFragment"
+            app:destination="@id/scoreCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/live"
+        android:name="com.wedoapps.cricketmazza.Ui.Live.LiveFragment"
+        android:label="fragment_live"
+        tools:layout="@layout/fragment_live" />
+    <fragment
+        android:id="@+id/recent"
+        android:name="com.wedoapps.cricketmazza.Ui.Recents.RecentFragment"
+        android:label="fragment_recent"
+        tools:layout="@layout/fragment_recent" />
+    <fragment
+        android:id="@+id/upcoming"
+        android:name="com.wedoapps.cricketmazza.Ui.Upcoming.UpcomingFragment"
+        android:label="fragment_upcomings"
+        tools:layout="@layout/fragment_upcomings" />
+    <fragment
+        android:id="@+id/update"
+        android:name="com.wedoapps.cricketmazza.Ui.Updates.UpdatesFragment"
+        android:label="fragment_updates"
+        tools:layout="@layout/fragment_updates" >
+        <action
+            android:id="@+id/action_update_to_singleUpdatesFragment"
+            app:destination="@id/singleUpdatesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleUpdatesFragment"
+        android:name="com.wedoapps.cricketmazza.Ui.Updates.SingleUpdatesFragment"
+        android:label="fragment_single_updates"
+        tools:layout="@layout/fragment_single_updates" >
+        <argument
+            android:name="news"
+            app:argType="com.wedoapps.cricketmazza.Ui.Updates.Model.NewsModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/recentMatchDetailFragment"
+        android:name="com.wedoapps.cricketmazza.Ui.Home.RecentMatchDetailFragment"
+        android:label="fragment_recent_match_detail"
+        tools:layout="@layout/fragment_recent_match_detail" >
+        <argument
+            android:name="data"
+            app:argType="com.wedoapps.cricketmazza.Ui.Home.Models.RecentMatchData" />
+    </fragment>
+    <fragment
+        android:id="@+id/pointsTableFragment"
+        android:name="com.wedoapps.cricketmazza.Ui.MatchDetails.PointsTableFragment"
+        android:label="fragment_points_table"
+        tools:layout="@layout/fragment_points_table" >
+        <argument
+            android:name="matchData"
+            app:argType="com.wedoapps.cricketmazza.Ui.Home.Models.RecentMatchData" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreCardFragment"
+        android:name="com.wedoapps.cricketmazza.Ui.MatchDetails.ScoreCardFragment"
+        android:label="fragment_score_card"
+        tools:layout="@layout/fragment_score_card" >
+        <argument
+            android:name="matchData"
+            app:argType="com.wedoapps.cricketmazza.Ui.Home.Models.RecentMatchData" />
+    </fragment>
+</navigation>

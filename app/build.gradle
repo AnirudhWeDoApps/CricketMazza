@@ -1,0 +1,106 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.wedoapps.CricketLiveLine"
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation platform("com.google.firebase:firebase-bom:$firebase_bom_version")
+    implementation "androidx.core:core-ktx:$ktx_version"
+    implementation "androidx.appcompat:appcompat:$appCompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$junitExt_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+
+
+    // Firebase
+    implementation "com.google.firebase:firebase-firestore-ktx"
+//    implementation "com.google.firebase:firebase-analytics-ktx"
+//    implementation "com.google.firebase:firebase-crashlytics-ktx"
+    implementation "com.google.firebase:firebase-storage-ktx"
+
+    // Fragment
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    // Navigation Component
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    // ViewModel + LiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    // Room
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+
+    // CircleImageView
+    implementation "de.hdodenhof:circleimageview:$circleImageView_version"
+
+    // Indicator
+    implementation "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:$indicator_version"
+
+    // BottomNavigation
+    implementation "com.github.ismaeldivita:chip-navigation-bar:$chipNavigation_version"
+
+    // SSP + SDP
+    implementation "com.intuit.ssp:ssp-android:$ssp_sdp_version"
+    implementation "com.intuit.sdp:sdp-android:$ssp_sdp_version"
+
+    // Progress Indicator
+    implementation "com.github.antonKozyriatskyi:CircularProgressIndicator:$progress_indicator_version"
+    implementation "com.github.Adilhusen:circle-progress-ad-android-:$circle_version"
+
+    //SpinKit
+    implementation "com.github.ybq:Android-SpinKit:$spinkit_version"
+
+
+}
